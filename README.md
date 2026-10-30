@@ -43,7 +43,7 @@ En la terminal se visualizan siempre **únicamente los dos tableros del jugador*
 
 ## 🏗️ 2. Arquitectura del Proyecto
 
-El sistema sigue el principio de **Separación de Responsabilidades (SoC)** dividido en cuatro módulos de código:
+El sistema sigue el principio de **Separation of Concerns (SoC)** dividido en cuatro módulos de código:
 
 1. **`variables.py`:** Define constantes dimensionales, estructura de la flota y códigos de escape ANSI (`colorama`).
 2. **`funciones.py`:** Implementa la lógica matricial sobre `numpy.ndarray` (`crear_tablero`, `crear_barco`, `validar_posicion_barco`, `colocar_barco`, `colocar_barcos` y `disparar`).
