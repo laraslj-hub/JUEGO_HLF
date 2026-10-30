@@ -243,7 +243,7 @@ class JuegoHundirLaFlota:
         print(f"║                     HUNDIR LA FLOTA - TERMINAL EDITION                      ║")
         print(f"╚═════════════════════════════════════════════════════════════════════════════╝{var.COLOR_RESET}")
         
-        # Indicador explícito de a qué jugador corresponde el turno (requisito 10)
+        # Indicador explícito de a qué jugador corresponde el turno
         print(f"\n  {var.COLOR_ALERTA}► TURNO ACTUAL: {turno_actual.upper()}{var.COLOR_RESET}")
         print(f"  ► Último registro: {self.ultimo_evento}")
         print(
@@ -305,7 +305,7 @@ class JuegoHundirLaFlota:
             if not oponente.tablero.tiene_barcos_activos():
                 break
                 
-            # Regla de repetición de turno (Requisito 9):
+            # Regla de repetición de turno:
             # Si acierta una coordenada del barco rival, repite turno y vuelve a disparar.
             if acierto:
                 self.ultimo_evento += " ¡Repite turno por haber acertado!"
@@ -321,7 +321,7 @@ class JuegoHundirLaFlota:
 
     def _mostrar_pantalla_final(self) -> None:
         """
-        Gestiona el desenlace del juego cumpliendo estrictamente el requisito 11:
+        Gestiona el desenlace del juego cumpliendo estrictamente el siguiente requisito:
         - Si gana el humano: muestra el tablero de la máquina con todos sus barcos
           y un mensaje de felicitación.
         - Si gana la máquina: muestra el tablero del humano con todos sus barcos
@@ -361,12 +361,12 @@ class JuegoHundirLaFlota:
 
 
 # ==============================================================================
-# DEMOSTRACIÓN GUIADA DE REQUISITOS TÉCNICOS (PUNTOS 6, 8 Y 14)
+# DEMOSTRACIÓN GUIADA DE REQUISITOS TÉCNICOS
 # ==============================================================================
 
 def ejecutar_demo_terminal() -> None:
     """
-    Prepara y ejecuta la demostración interactiva desde la terminal (requisito 14),
+    Prepara y ejecuta la demostración interactiva desde la terminal,
     incluyendo las pruebas específicas de los puntos 6 y 8 y una simulación de juego.
     """
     limpiar_pantalla()
@@ -375,7 +375,7 @@ def ejecutar_demo_terminal() -> None:
     # 1. Crear tablero 10x10 con NumPy
     tablero_prueba = fn.crear_tablero(10)
     
-    # 2. Posicionar los dos barcos de prueba solicitados en el requisito 6:
+    # 2. Posicionar los dos barcos de prueba solicitados en el uno de los requisitos del juego:
     # Barco de eslora 2 en [(0,1), (1,1)] y barco de eslora 4 en [(1,3), (1,4), (1,5), (1,6)]
     barco_eslora_2 = [(0, 1), (1, 1)]
     barco_eslora_4 = [(1, 3), (1, 4), (1, 5), (1, 6)]
