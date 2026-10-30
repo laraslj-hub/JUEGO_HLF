@@ -52,15 +52,15 @@ def mostrar_dos_tableros(
     separador_central = "      ║      "
     
     # Cabeceras de ambos tableros
-    print(f"\n{var.COLOR_CABECERA}{titulo_izq.center(31)}{separador_central}{titulo_der.center(31)}{var.COLOR_RESET}")
+    print(f"\n{var.COLOR_CABECERA}{titulo_izq.center(31)}       {separador_central}{titulo_der.center(31)}{var.COLOR_RESET}")
     
     # Índices superiores de columna (0 a 9)
     indices_col = "    " + " ".join(f"{col:2d}" for col in range(tamaño))
-    print(f"{var.COLOR_CABECERA}{indices_col}{separador_central}{indices_col}{var.COLOR_RESET}")
+    print(f"{var.COLOR_CABECERA}{indices_col}     {separador_central}{indices_col}{var.COLOR_RESET}")
     
     # Borde superior del marco
     borde_sup = "   ╔" + "═══" * tamaño + "╗"
-    print(f"{var.COLOR_CABECERA}{borde_sup}{separador_central}{borde_sup}{var.COLOR_RESET}")
+    print(f"{var.COLOR_CABECERA}{borde_sup}   {separador_central}{borde_sup}{var.COLOR_RESET}")
     
     # Filas de ambos tableros con números de fila en los bordes izquierdo y derecho
     for fila in range(tamaño):
@@ -81,8 +81,8 @@ def mostrar_dos_tableros(
         
     # Borde inferior del marco
     borde_inf = "   ╚" + "═══" * tamaño + "╝"
-    print(f"{var.COLOR_CABECERA}{borde_inf}{separador_central}{borde_inf}{var.COLOR_RESET}")
-    print(f"{var.COLOR_CABECERA}{indices_col}{separador_central}{indices_col}{var.COLOR_RESET}")
+    print(f"{var.COLOR_CABECERA}{borde_inf}   {separador_central}{borde_inf}{var.COLOR_RESET}")
+    print(f"{var.COLOR_CABECERA}{indices_col}     {separador_central}{indices_col}{var.COLOR_RESET}")
     
     # Leyenda cromática compacta
     leyenda = (
